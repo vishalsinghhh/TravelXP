@@ -2,6 +2,7 @@ import React from 'react';
 import styled, {css} from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import { menuData } from '../data/MenuData';
+import { Button } from './Button';
 
 const Nav = styled.nav`
     height: 60px;
@@ -11,7 +12,7 @@ const Nav = styled.nav`
     z-index: 100;
     position: fixed;
     width: 100%;
-    background: #000;
+    background: grey;
 `;
 
 const NavLink = css`
@@ -26,16 +27,22 @@ const NavLink = css`
 
 const Logo = styled(Link)`
     ${NavLink}
-    color: #fff;
     font-style: italic;
 `
 const MenuBars = styled.i``
 const NavMenu = styled.div`
     display: flex;
     align-items: center;
+    margin-right: -48px;
 `
 const NavMenuLinks = styled(Link)`
     ${NavLink}
+`;
+
+const NavBtn = styled.div`
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
 `;
 
 const Navbar = () => {
@@ -50,6 +57,11 @@ const Navbar = () => {
                     </NavMenuLinks>
                 ))}
             </NavMenu>
+            <NavBtn>
+                <Button to = "/contact" primary='true'>
+                    Contact Us
+                </Button>
+            </NavBtn>
         </Nav>
     )
 }
