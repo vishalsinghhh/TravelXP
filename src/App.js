@@ -6,7 +6,7 @@ import GlobalStyle from './globalStyles'
 const App = () => {
   return (
     <>
-    <GlobalStyle/>
+      <GlobalStyle/>
       <Navbar/>
     </>
   )
